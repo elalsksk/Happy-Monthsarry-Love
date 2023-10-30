@@ -1,0 +1,128 @@
+/* Common styles for all screen sizes */
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+}
+
+/* Your existing CSS styles */
+
+h1 {
+    color: #111;
+    font-size: 13rem;
+}
+
+/* Media query for a specific screen size (e.g., iPhone XR) */3
+@media screen and (max-width: 828px) {
+    h1 {
+        font-size: 3em; /* Adjust the font size for the desired screen size */
+    }
+}
+
+
+h1 span {
+    display: table-cell;
+    animation: animate 5s linear infinite;
+}
+
+h1 span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+h1 span:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+h1 span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+h1 span:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+h1 span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+h1 span:nth-child(6) {
+    animation-delay: 1.25s;
+}
+
+h1 span:nth-child(7) {
+    animation-delay: 1.5s;
+}
+
+h1 span:nth-child(8) {
+    animation-delay: 1.75s;
+}
+
+@keyframes animate {
+    0%, 100% {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #ff0000,
+            0 0 20px #ff003c,
+            0 0 40px #ff003c,
+            0 0 80px #ff003c,
+            0 0 120px #ff003c,
+            0 0 200px #ff003c,
+            0 0 300px #ff003c,
+            0 0 400px #ff003c;
+    }
+
+    5%, 95% {
+        color: #111;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
+p {
+    color: #fff;
+    background: #000000;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 10px;
+    font-size: 2.2em;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 8em;
+    }
+
+    p {
+        font-size: 1.8em;
+    }
+}
+
+/* Your existing CSS styles for the button */
+button {
+    background: #ff003c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px transparent;
+}
+
+button:hover {
+    background: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+}
